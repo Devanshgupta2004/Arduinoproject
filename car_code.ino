@@ -7,15 +7,15 @@
 #define MAX_SPEED 200 //motor speed
 #define MAX_SPEED_OFFSET 20
 NewPing sonar(TRIG_PIN, ECHO_PIN, MAX_DISTANCE);
-AF_DCMotor motor1(2, MOTOR12_1KHZ); // motor 1 connected at M1
-AF_DCMotor motor2(4, MOTOR34_1KHZ); // motor2 connected at M3
+AF_DCMotor motor1(2, MOTOR12_1KHZ); // motor 1 connected at M2
+AF_DCMotor motor2(4, MOTOR34_1KHZ); // motor2 connected at M4
 Servo myservo; //servo is named myservo
 boolean goesForward = false;
 int distance = 100; //distance and speed int
 int speedSet = 0;
 void setup() {
 myservo.attach(9); // Servo at digital pin 9
-myservo.write(90); // servo at 115 degrees
+myservo.write(90); // servo at 90 degrees
 delay(2000);
 distance = readPing(); //distance from the sensor
 delay(100);
